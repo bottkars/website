@@ -111,6 +111,17 @@ kubectl is available as a [snap](https://snapcraft.io/) application.
        brew install kubectl
 
 2. Run `kubectl version` to verify that the version you've installed is sufficiently up-to-date.
+## Install from Powershell Gallery on Windows
+
+1. If you are on Windows and using [Powershell Gallery](https://psgallery.org) as package manager, you can install with:
+
+       Install-Script -Name install-kubectl -Scope CurrentUser -Force
+       install-kubectl.ps1 [-Downloadlocation]
+
+if no Downloadlocation is specified, temp will be used
+2. Configure kubectl to use a remote Kubernetes cluster:
+After Installation, the installer will prompt you to edit the $HOME/.kube/config file       
+Edit the config file with a text editor of your choice, such as Notepad for example.
 
 ## Install with Chocolatey on Windows
 
